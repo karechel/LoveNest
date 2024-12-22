@@ -1,0 +1,148 @@
+.balthazar-regular {
+    font-family: "Balthazar", serif;
+    font-style: normal;
+  }
+  .indexContent{
+    /* background-color: #f7f3f2; */
+    /* height: 85vh; */
+    margin:0 56px 56px 56px;
+    position: relative;
+    display: flex;
+  }
+  .image-container {
+    position: absolute;
+    bottom: -110px;
+    left: -151px;
+    width: 30%;
+  }
+
+  .heading{
+     display: flex;
+     justify-content: flex-start;
+     text-align: center;
+     font-family: ui-monospace;
+     font-weight: 500;
+     font-size: 5em;
+     /* padding: 120px 0 10px 100px; */
+     padding: 120px 0 10px 50px;
+     margin: 0;
+     color: #4a4a4a;
+     width: 650px;
+  }
+  .intro-p{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    font-family: ui-monospace;
+    font-weight: lighter !important;
+    font-size: 2em;
+    /* padding: 0 0 10px 100px; */
+    padding: 0 0 10px 50px;
+    margin: 0;
+    z-index: 1;
+  }
+  .bookVendor{
+    position: relative;
+    display: flex;
+    display: flex;
+    bottom: auto;  
+  }
+ .container {
+  margin: 0 56px 0 56px; 
+  background-color: white; /* Set the background color of the container */
+}
+
+.section {
+  width: calc(100% - 112px); /* Adjust width to account for 56px margin on each side */
+  margin: 0 auto; /* Center the sections within the container */
+}
+ 
+
+   .about{
+    background-color: inherit;
+    height: 85vh;
+    margin:0 56px 56px 56px;
+    position: relative;
+   
+   }
+   .about p{
+    text-align: center;
+    font-family: ui-monospace;
+    font-weight: lighter !important;
+    font-size: 2em;
+    padding: 130px 0 10px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .background-wrapper {
+    margin: 0 56px 0 56px;
+    background-color: #f7f3f2;
+    
+  }
+
+  /* .about-vendors{
+    background-color: inherit;
+    height: 85vh;
+    margin:0 56px 56px 56px;
+    position: relative;
+  } */
+  .about-us #about-h1{
+    text-align: center;
+    font-family: allura;
+    font-weight: 500;
+    font-size: xxx-large;
+  }
+
+  .about-us #us-h1{
+    text-align: center;
+    font-weight: 500;
+    font-size: xxx-large;
+    margin-top: 10px;
+  }
+  .abt-vencontent{
+    display: flex;
+  }
+  .abt-vencontent img{
+    margin-left: 200px;
+  }
+  .abt-vencontent .text-container{
+    margin-left: 200px;
+  }
+  .abt-vencontent .text-container p{
+    font-family: Balthazar;
+    font-size:30px;
+  }
+ 
+  .couple-img{
+    width: 550px;
+    margin-top: 150px;
+    height: 550px;
+    margin-left: 10px;
+  }
+  .section-inner{
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+  }
+.ven-img{
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  width: 30%;
+  height: 30%;
+}
+.about-vendors{
+  position: absolute;
+  bottom: -1900px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.about-client {
+  position: absolute;
+  bottom: -2400px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
