@@ -17,18 +17,18 @@ function IndexContent() {
 
     // Parallax effect for flower image
     gsap.to(flowerImage, {
-      y: -150, // Adjust the vertical movement for the flower image
+      y: -150,
       scrollTrigger: {
-        trigger: textContainer, // Scroll effect based on the text-container visibility
-        start: 'top bottom', // When the top of the text-container enters the viewport
-        end: 'bottom top', // When the bottom of the text-container leaves the viewport
-        scrub: true, // Smooth parallax
+        trigger: textContainer,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
       },
     });
 
     // Parallax effect for couple image
     gsap.to(coupleImage, {
-      y: -100, // Adjust the vertical movement for the couple image
+      y: -100,
       scrollTrigger: {
         trigger: textContainer,
         start: 'top bottom',
@@ -41,13 +41,14 @@ function IndexContent() {
     gsap.to(textContainer, {
       scrollTrigger: {
         trigger: textContainer,
-        start: 'top center', // Pin when the top of text-container reaches the center of the viewport
-        end: '+=400', // Duration of the pinning effect
-        pin: true, // Pin the text-container in place
-        scrub: true, // Smooth scrolling once it starts moving
+        start: 'top center',
+        end: '+=400',
+        pin: true,
+        scrub: true,
       },
     });
 
+    // Background color change for sections
     const sections = document.querySelectorAll('.section');
     sections.forEach((section, i) => {
       const backgroundColor = section.dataset.bgcolor;
@@ -69,6 +70,39 @@ function IndexContent() {
         },
       });
     });
+
+    // Parallax effect for about-vendors and about-client sections
+    const aboutUs = document.querySelector('.about-us');
+    const aboutVendors = document.querySelector('.about-vendors');
+    const aboutClient = document.querySelector('.about-client');
+
+    ScrollTrigger.create({
+      trigger: aboutUs,
+      start: 'top top',
+      end: '+=1250',
+      pin: true,
+      scrub: true,
+    });
+
+    gsap.to(aboutVendors, {
+      y: '-100%',
+      scrollTrigger: {
+        trigger: aboutUs,
+        start: 'top top',
+        end: '+=1000',
+        scrub: true,
+      },
+    });
+
+    gsap.to(aboutClient, {
+      y: '-100%',
+      scrollTrigger: {
+        trigger: aboutVendors,
+        start: 'top top',
+        end: '+=1000',
+        scrub: true,
+      },
+    });
   }, []);
 
   return (
@@ -87,22 +121,21 @@ function IndexContent() {
             />
           </div>
           <div className="section-inner">
-            <div className="text-container" ref={textContainerRef}  style={{ top: "-300px" }}>
+            <div className="text-container" ref={textContainerRef} style={{ top: '-300px' }}>
               <h1 className="heading">Your Perfect Day,<br />A Click Away</h1>
               <p className="intro-p">
                 Discover talented vendors, compare packages,<br />
-                and book services with just a few clicks. Your <br />
+                and book services with just a few clicks. Your<br />
                 dream wedding is closer than you think.
               </p>
             </div>
-         
-          <img
-            ref={coupleImageRef}
-            className="couple-img"
-            src="/images/couple-2.jpg"
-            alt=""
-          />
-           </div>
+            <img
+              ref={coupleImageRef}
+              className="couple-img"
+              src="/images/couple-2.jpg"
+              alt=""
+            />
+          </div>
         </div>
       </section>
 
@@ -111,7 +144,15 @@ function IndexContent() {
         data-bgcolor="#ffffff"
       >
         <div className="about">
-          <p>Love Nest is your one-stop shop for all your wedding <br />planning needs. We’re passionate about creating <br />unforgettable wedding experiences, tailored to your <br />unique style and vision. From finding the perfect venue <br />to selecting the ideal vendors, we’re here to guide you <br />every step of the way. Let us take the stress out of <br />wedding planning and help you create a truly magical <br />day.</p>
+          <p>Love Nest is your one-stop shop for all your wedding<br />
+            planning needs. We’re passionate about creating<br />
+            unforgettable wedding experiences, tailored to your<br />
+            unique style and vision. From finding the perfect venue<br />
+            to selecting the ideal vendors, we’re here to guide you<br />
+            every step of the way. Let us take the stress out of<br />
+            wedding planning and help you create a truly magical<br />
+            day.
+          </p>
         </div>
       </section>
 
@@ -119,14 +160,29 @@ function IndexContent() {
         className="section h-screen relative flex items-center justify-center"
         data-bgcolor="#f7f3f2"
       >
-        <div className="about-vendors">
+        <div className="about-us">
           <h1 id="about-h1">About</h1>
           <h1 id="us-h1">Us</h1>
+        </div>
+        <div className="about-vendors">
           <div className="abt-vencontent">
             <img className="ven-img" src="/images/vendors2.jpg" alt="" />
             <div className="text-container">
               <h1>Our Vendors</h1>
-              <p>As a wedding vendor, Love Nest is your ultimate tool. Create a stunning profile, showcase your work, and connect with couples looking for the best. Expand your client base and elevate your business today.</p>
+              <p>As a wedding vendor, Love Nest is your ultimate tool. Create a
+                stunning profile, showcase your work, and connect with couples looking for the best. Expand your client base and elevate your business today.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="about-client">
+          <div className="abt-vencontent">
+            <img className="ven-img" src="/images/vendors2.jpg" alt="" />
+            <div className="text-container">
+              <h1>Our Clients</h1>
+              <p>We connect you to the best vendors for your dream wedding, ensuring
+                an unforgettable experience.
+              </p>
             </div>
           </div>
         </div>
